@@ -20,7 +20,7 @@ World Tour is a React single-page application (SPA) that allows users to browse 
 
 ## 📸 Preview and Live Preview
 
-> Live Preview: [Live](https://dothp-harshu.github.io/world_tour/)
+> Live Preview: [Live](https://dothpworldtour.netlify.app/)
 
 Preview Image
 ![Home](./public/prewiew/home.png)
