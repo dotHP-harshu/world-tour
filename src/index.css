@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --dark-bg: #202020;
+  --light-bg: #383838;
+  --dark-text: white;
+  --light-text: #bebebe;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  padding-top: 5rem;
+}
+
+.about-card {
+  border: 2px solid transparent;
+  transition: border 0.5s ease-in;
+  background: linear-gradient(
+    45deg,
+    #202020,
+    #292929,
+    var(--light-bg),
+    #292929,
+    #202020
+  );
+
+  &:hover {
+    border: 2px solid var(--light-bg);
+  }
+}
+
+.country-card {
+  transition: all 0.7s;
+  background: linear-gradient(
+    45deg,
+    #202020,
+    #292929,
+    var(--light-bg),
+    #292929,
+    #202020
+  );
+  border: 2px solid transparent;
+  &:hover {
+    border-color: var(--dark-bg);
+    transform: scale(0.95);
+  }
+}
