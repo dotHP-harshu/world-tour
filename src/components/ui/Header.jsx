@@ -13,7 +13,7 @@ function Header() {
           className="lg:text-3xl sm:text-xl max-sm:text-lg font-semibold font-mono"
           href="/"
         >
-          World Atlas
+          World Tour
         </a>
       </div>
 

@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import countryApi from "../api/countryApi";
 import CountryCard from "../components/country/CountryCard";
-import { RiLoader4Line } from "react-icons/ri";
+import Loader from "../components/ui/Loader";
 
 function Country() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchKeyword, setSearchKeyword] = useState("");
-  const [selectedRegion, setSelectedRegion] = useState("All");
+  const [selectedRegion, setSelectedRegion] = useState("Africa");
   const [regions, setRegions] = useState([
-    "All",
     "Africa",
     "Asia",
     "Europe",
@@ -19,12 +18,6 @@ function Country() {
   ]);
   const fetchData = async () => {
     try {
-      if (selectedRegion === "All") {
-        const response = await countryApi.get(`all`);
-        setIsLoading(false);
-        setCountries(response.data);
-        return;
-      }
       const response = await countryApi.get(`region/${selectedRegion}`);
       setIsLoading(false);
       setCountries(response.data);
@@ -55,7 +48,7 @@ function Country() {
   if (isLoading)
     return (
       <div className="w-full h-96 flex justify-center items-center">
-        <RiLoader4Line size={50} />
+        <Loader />
       </div>
     );
 
