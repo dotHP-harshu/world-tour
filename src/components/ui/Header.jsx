@@ -4,7 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { NavLink } from "react-router";
 
 function Header() {
-  const [isShowingMenu, setIsShowingMenu] = useState(true);
+  const [isShowingMenu, setIsShowingMenu] = useState(false);
   const toggleMenu = () => setIsShowingMenu((prev) => !prev);
   return (
     <header className="w-full fixed top-0 left-0 bg-[var(--dark-bg)] text-[var(--dark-text)] grid grid-cols-2 h-14 lg:px-20  sm:px-10 max-sm:px-5  ">
